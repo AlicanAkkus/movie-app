@@ -1,0 +1,82 @@
+.bold {
+	font-family: 'OpenSansBold';
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+html,body {
+	height: 100%;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+.site-footer,.page-wrap:after {
+	height: 50px;
+}
+
+.site-footer {
+	background: #e2e2e2;
+	border-top: 1px solid #cfcfcf;
+	padding: 12px;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	color: #8b8b8b;
+}
+
+.alert {
+	padding: 10px;
+	margin: 20px;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+}
+
+.resize-text,.resize-text a {
+	font-size: 18px;
+	color: #818181;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
+
+.asteriskField{color: red;}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}

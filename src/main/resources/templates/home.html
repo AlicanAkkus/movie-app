@@ -1,0 +1,85 @@
+<html xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+<title>Iyzico Challenge</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+	<link href="/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/css/core.css" rel="stylesheet" />
+	<script src="/js/vue.js" type="text/javascript"></script>
+	<script src="/js/vue-resource.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="movie">
+		<div class="page-wrap">
+			<!-- Header -->
+			<div class="navbar navbar-inverse">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Spring Boot for Docker</a>
+				</div>
+			</div>
+			<!-- Header Bitti -->
+
+			<!-- Container Modul -->
+			<div class="container">
+				<div class="panel panel-default" id="speakers">
+					<div class="panel-heading">
+						Search Movies
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="text" class="form-control" id="search" placeholder="Search movie and press enter" v-model="search" v-on:keyup.enter="searchMovies()" />
+							</div>
+						</div>
+						<hr/>
+						<div class="row" v-if="movie">
+							<div v-if="movie.Response">
+								<div class="col-sm-3">
+									<img v-bind:src="movie.Poster" height="250" width="250"/>
+								</div>
+								<div class="col-sm-9">
+									<div class="table-responsive">
+										<table class="table table-bordered">
+											<tr>
+												<td><b>Movie</b></td>
+												<td>
+													<b>{{movie.Title}}</b>
+												</td>
+											</tr>
+											<tr>
+												<td><b>Actors</b></td>
+												<td>{{movie.Actors}}</td>
+											</tr>
+											<tr>
+												<td><b>Awards</b></td>
+												<td>{{movie.Awards}}</td>
+											</tr>
+											<tr>
+												<td><b>Language</b></td>
+												<td>{{movie.Language}}</td>
+											</tr>
+											<tr>
+												<td><b>IMDB</b></td>
+												<td><span class="label label-success">Votes : {{movie.imdbVotes}} </span><span class="label label-info">Rating : {{movie.imdbRating}}</span></td>
+											</tr>
+											<tr>
+												<td><b>Plot</b></td>
+												<td>
+													{{movie.Plot}}
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="/js/movie.js"></script>
+</html>
