@@ -1,4 +1,4 @@
-const moviesApiUrl = "http://www.omdbapi.com/?t=";
+const moviesApiUrl = "http://www.omdbapi.com?apikey=200eb0b9&t=";
 
 const movie = new Vue({
          el: '#movie',
